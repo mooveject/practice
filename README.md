@@ -1,3 +1,5 @@
 # practice
-## chapter2 자료형과 변수
-## chapter3 연산자 
+## chapter
+-자료형과 변수
+-연산자 
+
