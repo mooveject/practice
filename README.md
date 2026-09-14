@@ -1,8 +1,2 @@
-# practice
-## chapter 2~
-2. 자료형과 변수
-3. 연산자
-4. 문자열
-5. 자료구조
-6. 제어문
-7. 함수
+# Python coding practice
+
