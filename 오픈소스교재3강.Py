@@ -98,3 +98,41 @@ df = pd.DataFrame([data2])
 df.to_json('friends.json',orient ='records',indent=4, force_ascii = False)
 print (df)
 
+# 3.5.1 DataFrame 구성 요소 출력 예
+import pandas as pd
+
+data = {
+     '이름' : ['김철수', '이영희', '박민수'],
+     '학년' : [1,3,2],
+     '학점' : [4.2, 3.8, 4.5],
+     '학과' : ['컴퓨터', '경영', '영문']
+     }
+df = pd.DataFrame(data)
+
+print ('index:\n',df.index)
+print ('\ncolumns:\n', df.columns)
+print ('\nvalues:\n',df.values.flatten())
+print ('\nrows:\n', df.values.tolist())
+
+# 3.5.2 DataFrame 저장
+import pandas as pd
+import json 
+
+data = {
+     'name' : ["Jane","Tom","John"],
+     'grade' :[1,2,3],
+     'score' :[4.2, 3.8, 3.5]
+}
+
+df1 = pd.DataFrame.from_dict(data,orient='index')
+df.to_csv('students_scores.csv',encoding='utf-8',index=False)
+our_class = df.to_csv
+with open ('students_scores.csv','r',encoding='utf-8') as f:
+     print('\n',our_class)
+
+df2 =pd.DataFrame.from_records(data)
+print (df1)
+print (df2)
+
+"df3=pd.DataFrame.read_csv('students.csv', encoding= 'utf-8')"
+"df4=pd.DataFrame.read_json('students.json')"
